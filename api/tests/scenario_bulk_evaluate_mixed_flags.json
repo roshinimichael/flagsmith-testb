@@ -1,0 +1,158 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"email\": \"admin@example.com\", \"password\": \"TestPass123!\"}",
+    "ResponseBody": "{\"key\": \"41554ff02a5aeb4906a059c561c21e4c359e251a\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/auth/login/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8080,
+    "Timestamp": "2026-03-18T14:20:20.729Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"BulkEval Test Org\"}",
+    "ResponseBody": "{\"id\": 3, \"name\": \"BulkEval Test Org\", \"created_date\": \"2026-03-18T00:00:00Z\", \"role\": \"ADMIN\", \"persist_trait_data\": true}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/organisations/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8080,
+    "Timestamp": "2026-03-18T14:20:25.642Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"BulkEval Test Project\", \"organisation\": 3}",
+    "ResponseBody": "{\"id\": 3, \"name\": \"BulkEval Test Project\", \"organisation\": 3, \"hide_disabled_flags\": false}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/projects/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8080,
+    "Timestamp": "2026-03-18T14:20:29.811Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Development\", \"project\": 3}",
+    "ResponseBody": "{\"id\": 3, \"name\": \"Development\", \"api_key\": \"kA2QVhx4aHfQExqzm7Vw3A\", \"project\": 3}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/environments/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8080,
+    "Timestamp": "2026-03-18T14:20:35.609Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"bulk_eval_test_flag\", \"type\": \"FLAG\", \"description\": \"Test flag for bulk evaluation\"}",
+    "ResponseBody": "{\"id\": 3, \"name\": \"bulk_eval_test_flag\", \"type\": \"FLAG\", \"description\": \"Test flag for bulk evaluation\", \"project\": 3}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/projects/3/features/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8080,
+    "Timestamp": "2026-03-18T14:20:40.242Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"feature_names\": [\"bulk_eval_test_flag\", \"nonexistent_flag_xyz\"], \"identifier\": \"test-user-001\"}",
+    "ResponseBody": "{\"results\": [{\"feature_name\": \"bulk_eval_test_flag\", \"enabled\": false, \"value\": null, \"reason\": \"DEFAULT\"}, {\"feature_name\": \"nonexistent_flag_xyz\", \"enabled\": false, \"value\": null, \"reason\": \"UNKNOWN_FLAG\"}], \"evaluated_at\": \"2026-03-18T14:20:00Z\", \"environment_id\": 3}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/features/bulk-evaluate/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8080,
+    "Timestamp": "2026-03-18T14:20:48.044Z",
+    "Scheme": "http"
+  }
+]
