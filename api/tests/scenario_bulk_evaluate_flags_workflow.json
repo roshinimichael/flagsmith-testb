@@ -1,0 +1,28 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"feature_names\": [\"dark-mode\", \"new-checkout\", \"unknown-nonexistent-flag-xyz\"], \"identifier\": \"integration-test-user-001\"}",
+    "ResponseBody": "{\"results\": [{\"feature_name\": \"dark-mode\", \"enabled\": false, \"value\": null, \"reason\": \"UNKNOWN_FLAG\"}, {\"feature_name\": \"new-checkout\", \"enabled\": false, \"value\": null, \"reason\": \"UNKNOWN_FLAG\"}, {\"feature_name\": \"unknown-nonexistent-flag-xyz\", \"enabled\": false, \"value\": null, \"reason\": \"UNKNOWN_FLAG\"}], \"evaluated_at\": \"2026-03-26T00:00:00Z\", \"environment_id\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/features/bulk-evaluate/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8080,
+    "Timestamp": "2026-03-26T21:35:47.628Z",
+    "Scheme": "http"
+  }
+]
