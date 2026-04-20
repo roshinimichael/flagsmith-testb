@@ -1,0 +1,54 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"email\": \"admin@example.com\", \"password\": \"password\"}",
+    "ResponseBody": "{\"token\": \"abc123token\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/auth/login/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-04-20T17:48:15.451Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"feature_names\": [\"test-flag\", \"unknown-flag-xyz\"], \"identifier\": \"user-123\"}",
+    "ResponseBody": "{\"results\": [{\"feature_name\": \"test-flag\", \"enabled\": false, \"value\": null, \"reason\": \"DEFAULT\"}, {\"feature_name\": \"unknown-flag-xyz\", \"enabled\": false, \"value\": null, \"reason\": \"UNKNOWN_FLAG\"}], \"evaluated_at\": \"2024-01-01T00:00:00Z\", \"environment_id\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/features/bulk-evaluate/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-04-20T17:48:15.451Z",
+    "Scheme": "http"
+  }
+]
