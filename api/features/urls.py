@@ -20,6 +20,8 @@ router = routers.DefaultRouter()
 router.register(r"featurestates", SimpleFeatureStateViewSet, basename="featurestates")
 router.register(r"feature-segments", FeatureSegmentViewSet, basename="feature-segment")
 
+from features.bulk_evaluate import urls as bulk_evaluate_urls
+
 app_name = "features"
 
 urlpatterns = [
@@ -45,6 +47,11 @@ urlpatterns = [
         "featurestates/get-by-uuid/<uuid:uuid>/",
         get_feature_state_by_uuid,
         name="get-feature-state-by-uuid",
+    ),
+    path(
+        "bulk-evaluate/",
+        include(bulk_evaluate_urls),
+        name="bulk-evaluate",
     ),
 ]
 
