@@ -1,0 +1,33 @@
+# Skyramp Workspace Configuration
+workspace:
+  repoName: roshinimichael/flagsmith-testb
+  repoUrl: https://github.com/roshinimichael/flagsmith-testb
+metadata:
+  schemaVersion: v1
+  mcpVersion: 0.1.0-rc.6
+  executorVersion: v1.3.21
+  createdAt: "2026-05-18T08:23:05.553Z"
+  updatedAt: "2026-05-18T08:23:05.560Z"
+services:
+  - serviceName: flagsmith-api
+    language: python
+    framework: pytest
+    testDirectory: api/tests
+    api:
+      authType: token
+      authHeader: Authorization
+      baseUrl: http://localhost:8000
+    runtimeDetails:
+      serverStartCommand: docker compose up -d flagsmith
+      runtime: docker
+      dockerNetwork: flagsmith-testb_default
+  - serviceName: flagsmith-frontend
+    language: typescript
+    framework: playwright
+    testDirectory: frontend/e2e
+    api:
+      authType: none
+      baseUrl: http://localhost:8080
+    runtimeDetails:
+      serverStartCommand: npm run dev
+      runtime: local
