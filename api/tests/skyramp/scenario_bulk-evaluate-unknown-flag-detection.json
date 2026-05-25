@@ -1,0 +1,28 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"feature_names\": [\"nonexistent_flag_xzy789\"]}",
+    "ResponseBody": "{\"results\": [{\"feature_name\": \"nonexistent_flag_xzy789\", \"enabled\": false, \"value\": null, \"reason\": \"UNKNOWN_FLAG\"}], \"evaluated_at\": \"2024-01-01T00:00:00Z\", \"environment_id\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/features/bulk-evaluate/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8080,
+    "Timestamp": "2026-05-25T08:39:38.349Z",
+    "Scheme": "http"
+  }
+]

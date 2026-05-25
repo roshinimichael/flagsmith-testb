@@ -1,0 +1,28 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"feature_names\": [\"new_dashboard\", \"beta_features\"]}",
+    "ResponseBody": "{\"results\": [{\"feature_name\": \"new_dashboard\", \"enabled\": false, \"value\": null, \"reason\": \"DEFAULT\"}, {\"feature_name\": \"beta_features\", \"enabled\": false, \"value\": null, \"reason\": \"DEFAULT\"}], \"evaluated_at\": \"2024-01-01T00:00:00Z\", \"environment_id\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Token SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/v1/features/bulk-evaluate/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8080,
+    "Timestamp": "2026-05-25T08:39:34.500Z",
+    "Scheme": "http"
+  }
+]
